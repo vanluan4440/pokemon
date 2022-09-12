@@ -1,0 +1,10 @@
+<div class="row row-cols-1 row-cols-md-3 g-4" >
+  <div class="col" *ngFor="let item of listPokemons">
+    <div class="card" >
+      <img src="{{item.sprites.front_shiny}}" class="card-img-top" (click)="openDialog(item.forms[0].name)" alt="{{item.forms[0].name}}"/>
+      <div class="card-body" (click)="openDialog(item.forms[0].name)">
+        <h5  class="card-title">{{item.forms[0].name}}</h5>
+      </div>
+    </div>
+  </div>
+</div>

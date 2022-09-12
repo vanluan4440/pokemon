@@ -1,0 +1,30 @@
+<div class="card mb-3" style="max-width: 740px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        src="{{informationPokemon?.sprites.front_shiny}}"
+        alt="pokemon"
+        class="img-fluid rounded-start"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">name: {{informationPokemon?.forms[0].name}}</h5>
+        <p class="card-text">
+          height: {{informationPokemon?.height}}
+        </p>
+        <p class="card-text">
+          abilities:
+        </p>
+        <p *ngFor="let abilitie of abilitiesPokemon">
+          <span >
+               ==> {{abilitie.ability.name}}
+          </span>
+        </p>
+
+
+        <button type="button" class="btn btn-primary">See more</button>
+      </div>
+    </div>
+  </div>
+</div>
